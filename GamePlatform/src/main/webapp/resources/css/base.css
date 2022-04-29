@@ -1,0 +1,141 @@
+body {
+	background-color : #6B778D;
+	
+}
+
+header section{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-basis: 300px;
+	flex-grow: 0;
+	
+}
+
+
+header input {
+	width: 700px;
+	padding: 5px;
+	padding-left: 10px;
+	
+	background-color: #263859;
+	font-size : 1.1em;
+	border-radius: 10px;
+	border: none;
+	padding-top: 8px;
+	color : white;
+	
+}
+
+header input::placeholder{
+	color: white;
+
+}
+
+.logo {
+	color : #FF6768;
+	font-size : 2em;
+	margin-left: 30px;
+}
+
+header section table{
+	margin-right : 30px;
+	border: 1px solid #17223B;
+	color : white;
+	background-color : #263859;
+	border-radius: 10px;
+}
+
+header section table tr td{
+	padding: 5px;
+}
+
+header section table tr td:nth-child(1) {
+	border-right : 1px solid white; 
+}
+
+
+
+
+nav ul{
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	color: white;
+	font-size: 1.5em;
+	margin-top: 4%;
+	background-color: #263859;
+	height: 50px;
+	align-items: center;
+}
+nav ul a{
+	color: white;
+	text-decoration: none;	
+}
+nav ul a:hover{
+	color: black;	
+}
+nav ul li:last-child {
+	margin-right: 100px;
+}
+
+nav ul li:first-child {
+	margin-left: 100px;
+}
+
+aside{
+	background-color: #263859;
+	color : white;
+	font-size: 1.2em;
+	padding-top : 10px;
+	padding-bottom: 10px;	
+}
+
+aside table {
+	width: 250px;
+	
+}
+
+aside table th{
+	padding-bottom : 10px;
+	border-bottom: 1px solid white;
+}
+
+aside table td{
+	padding-left: 20px;
+}
+
+#mainDoc{
+	display: flex;
+	justify-content: space-between;
+}
+
+#mainDoc section{
+	width: 80%;
+}
+
+#mainDoc section article{
+	background-color: #263859;
+	padding-left: 25px;
+	height: 250px;
+	
+}
+
+#mainDoc section article:last-child{
+	margin-top: 5%;
+}
+
+#mainDoc section article h3 {
+	color: white;
+	font-size : 1.3em;
+}
+.gameFrame{
+	display: flex;
+	justify-content: space-between;
+}
+.gameBox{
+	margin-top:5%;
+	width: 25%;
+	height: 150px;
+	background-color: white;
+}

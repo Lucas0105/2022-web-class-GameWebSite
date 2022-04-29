@@ -9,7 +9,7 @@
 
 <html>
 <head>
-	<title>Home</title>
+	<title>GamePlatform</title>
 </head>
 <body>
 <h1>
