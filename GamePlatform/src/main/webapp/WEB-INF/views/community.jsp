@@ -8,7 +8,7 @@
 
 <html>
 <head>
-<link href="${path}/resources/css/base.css" rel="stylesheet"/>
+<link href="${path}/resources/css/community.css" rel="stylesheet"/>
 
 <meta charset="UTF-8">
 <title>Game Platform</title>
@@ -42,7 +42,7 @@
 	<nav>
 		<ul>
 			<li><a href="#">새로운 게임</a></li>
-			<li><a href="/community">커뮤니티</a></li>
+			<li><a href="community">커뮤니티</a></li>
 			<li><a href="#">랭크</a></li>
 			<li><a href="#">다운로드</a></li>
 			<li><a href="#">고객센터</a></li>
@@ -75,44 +75,48 @@
 		</aside>
 		
 		<section>
-			<article class="gameFrame">
-				<h3>recommend game</h3>
-				<div class="gameBox">
-					게임1
-				</div>
+			<article id="communityFrame">
+				<h3>커뮤니티</h3>
 				
-				<div class="gameBox">
-					게임2
-				</div>
-				
-				<div class="gameBox">
-					게임3
-				</div>
-			</article>
-			
-			<article class="gameFrame">
-				<h3>popular game</h3>
-				
-					<div class="gameBox">
-						게임1
+				<div id="innerFrame">
+					<div class="communityBox">
+					</div>
+					<div class="communityBox">
+					</div>
+					<div class="communityBox">
+					</div>
+					<div class="communityBox">
+					</div>
+					<br>
+					
+					<div class="communityBox">
+					</div>
+					<div class="communityBox">
+					</div>
+					<div class="communityBox">
+					</div>
+					<div class="communityBox">
 					</div>
 					
-					<div class="gameBox">
-						게임2
-					</div>
-					
-					<div class="gameBox">
-						게임3
-					</div>
-			</article>
-		</section>
-		
-		<section id="loginForm">
-			<h3>게임 순위</h3>
+				</div>
 				
+				<div class="arrowBtn">
+					<span>&lt;</span>
+					<span>1</span>
 
-			
+					<span>2</span>
+
+					<span>3</span>
+					
+					<span>4</span>
+					
+					<span>5</span>
+					
+					<span>&gt;</span>
+				</div>
+			</article>
 		</section>
+	
 	</div>
 	
 	<footer>

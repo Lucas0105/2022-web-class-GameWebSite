@@ -114,13 +114,9 @@ aside table td{
 #mainDoc section article{
 	background-color: #263859;
 	padding-left: 25px;
-	height: 250px;
-	margin-left: 20px;
-	width: 1200px;
-}
-
-#mainDoc section article:last-child{
-	margin-top: 5%;
+	height: 500px;
+	width: 1150px;
+	margin-right: 20px;
 }
 
 #mainDoc section h3 {
@@ -143,6 +139,12 @@ aside table td{
 	margin-left: 20px;
 	margin-right:20px;
 }
+#innerFrame{
+	height: 400px;
+	width: 90%;
+	margin: 0 auto;
+	background-color: #17223B;
+}
 
 footer{
 	height: 200px;
@@ -150,6 +152,28 @@ footer{
 	background-color: #263859;
 	margin-top: 20px;
 	
+}
+
+.communityBox{
+	width: 200px;
+	height: 150px;
+	background-color: white;
+	display: inline-block;
+	margin-left: 44px;
+	margin-top : 30px;
+}
+
+.arrowBtn{
+	text-align : center;
+	margin-top : 10px;
+}
+
+.arrowBtn span{
+	border: 1px solid white;
+	background-color: #C4C4C4;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 10px;
 }
 
 	td h1{
@@ -297,8 +321,3 @@ footer{
             text-decoration: none;
             cursor: pointer;
         }
-        
- #communityFrame{
- 	height: 1000px !important;
- }
-		

@@ -32,13 +32,12 @@ public class UserController {
 	 @PostMapping("/login")
 	 public ResponseEntity<String> test(@RequestBody UserDTO user, RedirectAttributes rttr) throws JsonProcessingException {
 	
-	UserDTO result = service.login(user);
-	
-	log.info(result);
-	
-	ObjectMapper mapper = new ObjectMapper();
-	String samString = mapper.writeValueAsString(result);
+		 UserDTO result = service.login(user);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		String samString = mapper.writeValueAsString(result);
 
+		
 	 return new ResponseEntity<>(samString, HttpStatus.OK);
 	 }
 	
