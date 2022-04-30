@@ -34,8 +34,12 @@ public class UserController {
 	
 		 UserDTO result = service.login(user);
 		
+		 log.info(user);
+		 
 		ObjectMapper mapper = new ObjectMapper();
 		String samString = mapper.writeValueAsString(result);
+		
+		
 
 		
 	 return new ResponseEntity<>(samString, HttpStatus.OK);

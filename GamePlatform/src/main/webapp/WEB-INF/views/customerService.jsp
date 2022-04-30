@@ -85,15 +85,11 @@
 				</div>
 				
 				<div class="gameBox">
-					<a href = "/gameDetaile">
-						<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
-					</a>
+					<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
 				</div>
 				
 				<div class="gameBox">
-					<a href = "/gameDetaile">
-						<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
-					</a>
+					<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
 				</div>
 			</article>
 			
@@ -101,22 +97,15 @@
 				<h3>popular game</h3>
 				
 					<div class="gameBox">
-						<a href = "/gameDetaile">
-							<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
-						</a>
-						
+						게임1
 					</div>
 					
 					<div class="gameBox">
-						<a href = "/gameDetaile">
-							<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
-						</a>
+						게임2
 					</div>
 					
 					<div class="gameBox">
-						<a href = "/gameDetaile">
-							<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
-						</a>
+						게임3
 					</div>
 			</article>
 		</section>

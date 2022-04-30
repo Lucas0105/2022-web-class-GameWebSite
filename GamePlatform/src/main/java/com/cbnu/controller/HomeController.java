@@ -48,4 +48,56 @@ public class HomeController {
 		
 		return "community";
 	}
+	
+	@RequestMapping(value = "/gameDetaile", method = RequestMethod.GET)	// == getMapping
+	public String gameDetaile(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "gameDetaile";
+	}
+	
+	@RequestMapping(value = "/lank", method = RequestMethod.GET)	// == getMapping
+	public String lank(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "lank";
+	}
+	
+	@RequestMapping(value = "/customerService", method = RequestMethod.GET)	// == getMapping
+	public String customerService(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "customerService";
+	}
+	
+	@RequestMapping(value = "/newGame", method = RequestMethod.GET)	// == getMapping
+	public String newGame(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "newGame";
+	}
 }

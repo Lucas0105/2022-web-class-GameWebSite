@@ -16,7 +16,7 @@
 <header>
 	<section>
 		<div class = "logo">
-			Game Platform
+			<a href="/">Game Platform</a>
 		</div>
 		
 		<div class = "search">
@@ -41,11 +41,11 @@
 
 	<nav>
 		<ul>
-			<li><a href="#">새로운 게임</a></li>
-			<li><a href="community">커뮤니티</a></li>
-			<li><a href="#">랭크</a></li>
-			<li><a href="#">다운로드</a></li>
-			<li><a href="#">고객센터</a></li>
+			<li><a href="/newGame">새로운 게임</a></li>
+			<li><a href="/community">커뮤니티</a></li>
+			<li><a href="/lank">랭크</a></li>
+			<li><a href="/download">다운로드</a></li>
+			<li><a href="/customerService">고객센터</a></li>
 		</ul>
 	</nav>
 	
@@ -166,9 +166,9 @@
 	            </div>
 	            <div class="content">
 					<form id="registerForm" method="POST" enctype="multipart/form-data">
-						<input type="email" name="uEmail" id="uEmail" placeholder="email">
+						<input type="email" name="uEmail" id="userEmail" placeholder="email">
 						
-						<input type="password" name="uPw" id="uPw" placeholder="비밀번호">
+						<input type="password" name="uPw" id="userPw" placeholder="비밀번호">
 
 						<input type="password" name="uPw2" id="uPw2" placeholder="비밀번호 확인">
 						
@@ -240,8 +240,8 @@ function regBtn(){
 	
 
 	var data = {
-		uemail :$('#uEmail').val(),
-		upw :$('#uPw').val(),
+		uemail :$('#userEmail').val(),
+		upw :$('#userPw').val(),
 		uname :uname,
 		unickname :$('#uNickName').val(),
 		usex :$('#uSex').val(),
