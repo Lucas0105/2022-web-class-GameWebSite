@@ -9,7 +9,7 @@ header section{
 	align-items: center;
 	flex-basis: 300px;
 	flex-grow: 0;
-	
+	margin-top: 30px;
 }
 
 
@@ -39,7 +39,7 @@ header input::placeholder{
 }
 
 header section table{
-	margin-right : 30px;
+	margin-right : 50px;
 	border: 1px solid #17223B;
 	color : white;
 	background-color : #263859;
@@ -48,12 +48,12 @@ header section table{
 
 header section table tr td{
 	padding: 5px;
+	cursor: pointer;
 }
 
-header section table tr td:nth-child(1) {
-	border-right : 1px solid white; 
+header section table tr td:last-child{
+	border-left: 1px solid white;
 }
-
 
 
 
@@ -63,7 +63,6 @@ nav ul{
 	list-style: none;
 	color: white;
 	font-size: 1.5em;
-	margin-top: 4%;
 	background-color: #263859;
 	height: 50px;
 	align-items: center;
@@ -89,6 +88,7 @@ aside{
 	font-size: 1.2em;
 	padding-top : 10px;
 	padding-bottom: 10px;	
+	margin-left:20px;
 }
 
 aside table {
@@ -110,32 +110,191 @@ aside table td{
 	justify-content: space-between;
 }
 
-#mainDoc section{
-	width: 80%;
-}
 
 #mainDoc section article{
 	background-color: #263859;
 	padding-left: 25px;
 	height: 250px;
-	
+	margin-left: 20px;
+	width: 1200px;
 }
 
 #mainDoc section article:last-child{
 	margin-top: 5%;
 }
 
-#mainDoc section article h3 {
+#mainDoc section h3 {
 	color: white;
 	font-size : 1.3em;
+	margin-top: 0;
 }
-.gameFrame{
-	display: flex;
-	justify-content: space-between;
-}
+
 .gameBox{
-	margin-top:5%;
-	width: 25%;
-	height: 150px;
+	display:inline-block;
+	width: 250px;
+	height: 180px;
 	background-color: white;
+	margin-left: 10%
 }
+
+#loginForm{
+	background-color: #263859;
+	width: 20%;
+	margin-left: 20px;
+	margin-right:20px;
+}
+
+footer{
+	height: 200px;
+	width: 100%;
+	background-color: #263859;
+	margin-top: 20px;
+	
+}
+
+	td h1{
+	font-size: 0.8em;
+	margin: 0;
+	}
+        .modal .title {
+            padding-left: 10px;
+            display: inline;
+            color: #FF6768;
+            padding-top: 10px;
+            
+        }
+        .modal .title h2 {
+            display: inline;
+        }
+		.modal .titleBar{
+			height: 10px;
+			width: 100%;
+			background-color: white;		
+		}
+        .modal .content {
+            margin-top: 10px;
+            padding: 0px 10px;
+            text-shadow: 1px 1px 2px gray;
+            border-top:10px solid white;
+        }
+        
+        .modal form{
+        	margin-top:20px;
+        	padding-top : 30px;
+			background-color: #263859;
+			border-radius: 10px;
+			height: 400px;
+        }
+        
+         .modal #loginForm{
+        	margin-top:20px;
+        	padding-top : 30px;
+			background-color: #263859;
+			border-radius: 10px;
+			height: 250px;
+			width: 95%;
+        }
+       .modal form p{
+       	color: white;
+       	display: inline-block;
+       	margin-left: 40px;
+       }
+       .modal form .lastP{
+       	float: right;
+       	margin-right: 40px;
+       }
+		.modal input{
+			display: block;
+			margin: 0 auto;
+			height: 25px;
+			font-size: 1.2em;
+			margin-top: 10px;
+			padding-top: 10px;
+			width: 400px;
+			background-color: #C4C4C4;
+			
+		} 
+		
+		.modal input::placeholder{
+            color: #FF6768;
+            padding-left: 10px;
+		}
+		
+		.modal input[type="button"]{
+			border-radius: 5px;
+			color: #FF6768;
+			align-content: center;
+			height: 50px;
+			margin-bottom: 10px;
+			cursor: pointer;
+		}
+
+		#uFirstName{
+			width: 100px;
+			display: inline-block;
+			margin-left:25px;
+			
+		}
+
+		#uLastName{
+			width: 250px;
+			display: inline-block;
+			margin-left:30px;
+		
+		}
+		
+		.modal h3 {
+			display: inline-block;
+			color: #FF6768 !important;
+			margin: 0;
+			margin-left: 30px;
+			
+		}
+		
+		.modal input[type="radio"] {
+			display: inline-block;
+			width: 100px !important;
+		}
+		
+		.modal label {
+			display: inline-block;
+			color: #FF6768 !important;
+			margin-left: 30px;
+		}
+
+		/* mystyle.css */
+/* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #c4c4c4;
+            margin: 10% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 25%; /* Could be more or less, depending on screen size */
+        }
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+		
