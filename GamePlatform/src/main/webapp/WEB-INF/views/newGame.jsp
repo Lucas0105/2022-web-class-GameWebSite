@@ -8,7 +8,7 @@
 
 <html>
 <head>
-<link href="${path}/resources/css/base.css" rel="stylesheet"/>
+<link href="${path}/resources/css/gameKinds.css" rel="stylesheet"/>
 
 <meta charset="UTF-8">
 <title>Game Platform</title>
@@ -76,7 +76,7 @@
 		
 		<section>
 			<article class="gameFrame">
-				<h3>recommend game</h3>
+				<h3>new game</h3>
 				<div class="gameBox">
 					<a href = "/gameDetaile">
 						<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
@@ -91,31 +91,41 @@
 				<div class="gameBox">
 					<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
 				</div>
+				<br>	
+				
+				
+				<div class="gameFrame2">
+					<div class="gameBox">
+						<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
+					</div>
+					<div class="gameBox">
+						<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
+					</div>
+					<div class="gameBox">
+						<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
+					</div>
+				</div>
+				
+				
+				<div class="arrowBtn">
+					<span>&lt;</span>
+					<span>1</span>
+
+					<span>2</span>
+
+					<span>3</span>
+					
+					<span>4</span>
+					
+					<span>5</span>
+					
+					<span>&gt;</span>
+				</div>
 			</article>
 			
-			<article class="gameFrame">
-				<h3>popular game</h3>
 				
-					<div class="gameBox">
-						게임1
-					</div>
-					
-					<div class="gameBox">
-						게임2
-					</div>
-					
-					<div class="gameBox">
-						게임3
-					</div>
-			</article>
 		</section>
 		
-		<section id="loginForm">
-			<h3>게임 순위</h3>
-				
-
-			
-		</section>
 	</div>
 	
 	<footer>

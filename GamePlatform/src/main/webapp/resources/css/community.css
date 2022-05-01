@@ -115,7 +115,7 @@ aside table td{
 #mainDoc section article{
 	background-color: #263859;
 	padding-left: 25px;
-	height: 500px;
+	height: 520px;
 	width: 1150px;
 	margin-right: 20px;
 }
@@ -177,6 +177,15 @@ footer{
 	margin-left: 10px;
 }
 
+.newBtn{
+	float: right;
+	border: 1px solid black;
+	background-color: #c4c4c4;
+	margin-right: 30px;
+	text-decoration: none;
+	color: black;
+	padding: 5px;
+}
 	td h1{
 	font-size: 0.8em;
 	margin: 0;

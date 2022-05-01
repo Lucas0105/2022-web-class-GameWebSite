@@ -100,4 +100,71 @@ public class HomeController {
 		
 		return "newGame";
 	}
+	
+	@RequestMapping(value = "/searchGame", method = RequestMethod.GET)	// == getMapping
+	public String searchGame(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "searchGame";
+	}
+	
+	@RequestMapping(value = "/category", method = RequestMethod.GET)	// == getMapping
+	public String category(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "category";
+	}
+	
+	@RequestMapping(value = "/searchEmpty", method = RequestMethod.GET)	// == getMapping
+	public String searchEmpty(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "searchEmpty";
+	}
+	
+	@RequestMapping(value = "/gameDetails", method = RequestMethod.GET)	// == getMapping
+	public String gameDetails(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "gameDetails";
+	}
+	
+	
+	@RequestMapping(value = "/boardWrite", method = RequestMethod.GET)	// == getMapping
+	public String boardWrite(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		
+		return "boardWrite";
+	}
+	
 }

@@ -8,7 +8,7 @@
 
 <html>
 <head>
-<link href="${path}/resources/css/community.css" rel="stylesheet"/>
+<link href="${path}/resources/css/details.css" rel="stylesheet"/>
 
 <meta charset="UTF-8">
 <title>Game Platform</title>
@@ -51,85 +51,87 @@
 	
 </header>
 <body>
-	<div id="mainDoc">
-	
-		<aside>
-			<table>
-				<tr>
-					<th>category</th>
-				</tr>
-				<tr>
-					<td>
-						<p>슈팅</p>
-						<p>격투</p>
-						<p>전략 & RPG</p>
-						<p>레이싱</p>
-						<p>스포츠</p>
-						<p>시뮬레이션</p>
-						<p>액션</p>
-						<p>2인용</p>
-						<p>전쟁</p>
-					</td>
-				</tr>
-			</table>
-		</aside>
-		
+	<div id="mainDoc">	
 		<section>
 			<article id="communityFrame">
-				<h3>커뮤니티</h3>
+				<h3>게임 이름</h3>
 				
 				<div id="innerFrame">
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>					
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>					
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<br>
-					
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
+										
 					
 				</div>
-				
-				<div class="arrowBtn">
-					<span>&lt;</span>
-					<span>1</span>
-
-					<span>2</span>
-
-					<span>3</span>
-					
-					<span>4</span>
-					
-					<span>5</span>
-					
-					<span>&gt;</span>
-				</div>
-				
-				<a class="newBtn" href="/boardWrite">새 글 작성</a>
 				
 			</article>
+		
 		</section>
+		
 	
 	</div>
 	
+	<table class="description">
+		<tr>
+			<td>
+				img
+			</td>
+			<td>
+				text
+			</td>
+		</tr>
+	</table>
+	
+	<div class="review">
+		<h3>review</h3>
+		<div class="innerReview">
+			<table>
+				<tr>
+					<th>
+						닉네임
+					</th>
+					
+					<th>
+						내용
+					</th>
+					<th>
+						날짜
+					</th>			
+				</tr>
+				
+				<tr>
+					<td>test</td>
+					<td>test</td>
+					<td>test</td>
+				</tr>
+				
+								<tr>
+					<td>test</td>
+					<td>test</td>
+					<td>test</td>
+				</tr>
+								<tr>
+					<td>test</td>
+					<td>test</td>
+					<td>test</td>
+				</tr>
+								<tr>
+					<td>test</td>
+					<td>test</td>
+					<td>test</td>
+				</tr>
+				<tr>
+					<td>test</td>
+					<td>test</td>
+					<td>test</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<input type="text" name="reviewText" id="reviewText">
+						<input type="button" onclick="reviewBtn()" id="reviewBtn" value="댓글">
+					</td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
 	<footer>
 		Footer
 	</footer>
@@ -322,36 +324,9 @@ window.onload = function(){
 		document.getElementById('register').textContent= "로그아웃";
 
 	}
-	
-	$.ajax({
-		 url:'http://localhost:8080/board/output',
-	        type: 'GET',
-	        data: "",
-	        contentType: 'application/json; charset=utf-8',
-	        error: function () {            
-	 			
-	        }, success: function (result) {
-	            
-	        	
-	        	for(var i = 0; i<result.length; i++){
-	        		console.log(result[i].imgpath);
-	        		var img = document.getElementsByClassName("gameImage")[i];
-	        		img.src = "http://localhost:8080" +result[i].imgpath; 
-		        	console.log(img.src);
-	        	}
-	        
-	        	
-	        	
-
-	            
-	            //document.getElementById("login").textContent = window.localStorage.getItem('unickname');
-	            //document.getElementById("register").textContent = "로그아웃";  
-
-	        }
-	});	
-	
-	
 }
+
+
 
 $('#register').on("click", function(){
 	if(document.getElementById('register').textContent == "로그아웃"){
@@ -363,6 +338,10 @@ $('#register').on("click", function(){
 	}
 
 });
+
+function reviewBtn() {
+	console.log($('#reviewText').val());'
+}
 
  </script>
 </html>

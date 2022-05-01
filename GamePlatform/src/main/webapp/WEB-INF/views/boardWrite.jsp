@@ -8,7 +8,7 @@
 
 <html>
 <head>
-<link href="${path}/resources/css/community.css" rel="stylesheet"/>
+<link href="${path}/resources/css/boardWrite.css" rel="stylesheet"/>
 
 <meta charset="UTF-8">
 <title>Game Platform</title>
@@ -51,84 +51,33 @@
 	
 </header>
 <body>
-	<div id="mainDoc">
-	
-		<aside>
-			<table>
-				<tr>
-					<th>category</th>
-				</tr>
-				<tr>
-					<td>
-						<p>슈팅</p>
-						<p>격투</p>
-						<p>전략 & RPG</p>
-						<p>레이싱</p>
-						<p>스포츠</p>
-						<p>시뮬레이션</p>
-						<p>액션</p>
-						<p>2인용</p>
-						<p>전쟁</p>
-					</td>
-				</tr>
-			</table>
-		</aside>
-		
+	<div id="mainDoc">	
 		<section>
-			<article id="communityFrame">
-				<h3>커뮤니티</h3>
+			<article id="boardFrame">
+				<h3>게시판</h3>
 				
-				<div id="innerFrame">
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>					
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>					
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<br>
-					
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					
+				<div id="boardInnerFrame">
+				
+					<form role="form" id="boardForm" method="POST" >
+						<input type="text" name="title" id="title" placeholder="제목">
+						<input type="file" id="file1" name= "file1">
+						<div id="img_wrap">
+						   <img id="img" width="130px" height="130px"/>
+						</div> 
+						
+						<textarea id="content" placeholder="내용"></textarea>
+						<br>
+						<input type="button" onclick="submitBtn()" name="boardBtn" id="boardBtn" value="보내기">
+					</form>	
 				</div>
-				
-				<div class="arrowBtn">
-					<span>&lt;</span>
-					<span>1</span>
-
-					<span>2</span>
-
-					<span>3</span>
-					
-					<span>4</span>
-					
-					<span>5</span>
-					
-					<span>&gt;</span>
-				</div>
-				
-				<a class="newBtn" href="/boardWrite">새 글 작성</a>
 				
 			</article>
+		
 		</section>
+		
 	
 	</div>
+	
 	
 	<footer>
 		Footer
@@ -203,6 +152,36 @@
 
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    //이미지 미리보기
+    var sel_file;
+ 
+    $(document).ready(function() {
+        $("#file1").on("change", handleImgFileSelect);
+    });
+ 
+    function handleImgFileSelect(e) {
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+ 
+        var reg = /(.*?)\/(jpg|jpeg|png|bmp)$/;
+ 
+        filesArr.forEach(function(f) {
+            if (!f.type.match(reg)) {
+                alert("확장자는 이미지 확장자만 가능합니다.");
+                return;
+            }
+ 
+            sel_file = f;
+ 
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $("#img").attr("src", e.target.result);
+            }
+            reader.readAsDataURL(f);
+        });
+    }
+</script>
 <script>
 //Modal을 가져옵니다.
 var modals = document.getElementsByClassName("modal");
@@ -301,6 +280,8 @@ function loginBtn(){
             var resultData = JSON.parse(result);
 
             window.localStorage.setItem('unickname', resultData.unickname);
+            window.localStorage.setItem('uid', resultData.uid);
+
             
             document.getElementById("login").textContent = window.localStorage.getItem('unickname');
             document.getElementById("register").textContent = "로그아웃";
@@ -322,36 +303,9 @@ window.onload = function(){
 		document.getElementById('register').textContent= "로그아웃";
 
 	}
-	
-	$.ajax({
-		 url:'http://localhost:8080/board/output',
-	        type: 'GET',
-	        data: "",
-	        contentType: 'application/json; charset=utf-8',
-	        error: function () {            
-	 			
-	        }, success: function (result) {
-	            
-	        	
-	        	for(var i = 0; i<result.length; i++){
-	        		console.log(result[i].imgpath);
-	        		var img = document.getElementsByClassName("gameImage")[i];
-	        		img.src = "http://localhost:8080" +result[i].imgpath; 
-		        	console.log(img.src);
-	        	}
-	        
-	        	
-	        	
-
-	            
-	            //document.getElementById("login").textContent = window.localStorage.getItem('unickname');
-	            //document.getElementById("register").textContent = "로그아웃";  
-
-	        }
-	});	
-	
-	
 }
+
+
 
 $('#register').on("click", function(){
 	if(document.getElementById('register').textContent == "로그아웃"){
@@ -364,5 +318,39 @@ $('#register').on("click", function(){
 
 });
 
+function submitBtn(){
+	console.log($('#title').val());
+	console.log($('#content').val());
+    console.log(window.localStorage.getItem('uid'));
+    console.log(window.localStorage.getItem('unickname'));
+    var form = $('#boardForm')[0];
+    var formData = new FormData();
+    formData.append( "file1", $("#file1")[0].files[0] );
+    formData.append( "title", $("#title").val() );
+    formData.append( "content", $('#content').val() );
+    formData.append( "uid", window.localStorage.getItem('uid') );
+    formData.append( "unickname", window.localStorage.getItem('unickname') );
+    
+    
+    console.log(formData);
+    
+     $.ajax({
+         url : "/board/submit"
+       , type : "POST"
+       , cache : false
+       , processData : false
+       , contentType : false
+       , data : formData
+       , success:function(response) {
+           alert("성공하였습니다.");
+           location.href = '/community'
+           console.log(response);
+       }
+       ,error: function (jqXHR) 
+       { 
+           alert(jqXHR.responseText); 
+       }
+   });
+}
  </script>
 </html>

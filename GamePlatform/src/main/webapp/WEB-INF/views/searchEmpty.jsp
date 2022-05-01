@@ -8,7 +8,7 @@
 
 <html>
 <head>
-<link href="${path}/resources/css/community.css" rel="stylesheet"/>
+<link href="${path}/resources/css/base.css" rel="stylesheet"/>
 
 <meta charset="UTF-8">
 <title>Game Platform</title>
@@ -75,59 +75,35 @@
 		</aside>
 		
 		<section>
-			<article id="communityFrame">
-				<h3>커뮤니티</h3>
+			<article class="gameFrame">
+				<p class="emptyText">검색 내용이 존재하지 않습니다.</p>
+				<p class="emptyText">다시 검색해주세요.</p>
+			</article>
+			
+			<article class="gameFrame">
+				<h3>추천 게임</h3>
 				
-				<div id="innerFrame">
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>					
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>					
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<br>
-					
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
-					</div>
-					<div class="communityBox">
-						<img class="gameImage" src="${path}/resources/imgs/empty.jpg" width="200px" height="150px"></img>
+					<div class="gameBox">
+						<a href = "/gameDetaile">
+							<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
+						</a>
+						
 					</div>
 					
-				</div>
-				
-				<div class="arrowBtn">
-					<span>&lt;</span>
-					<span>1</span>
-
-					<span>2</span>
-
-					<span>3</span>
+					<div class="gameBox">
+						<a href = "/gameDetaile">
+							<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
+						</a>
+					</div>
 					
-					<span>4</span>
-					
-					<span>5</span>
-					
-					<span>&gt;</span>
-				</div>
-				
-				<a class="newBtn" href="/boardWrite">새 글 작성</a>
-				
+					<div class="gameBox">
+						<a href = "/gameDetaile">
+							<img src="${path}/resources/imgs/asteroidThumbnail.PNG" width="250px" height="180px"></img>
+						</a>
+					</div>
 			</article>
 		</section>
-	
+		
 	</div>
 	
 	<footer>
@@ -249,7 +225,6 @@ function regBtn(){
 	
 	var uname = $('#uFirstName').val() + $('#uLastName').val();
 	
-
 	var data = {
 		uemail :$('#userEmail').val(),
 		upw :$('#userPw').val(),
@@ -257,6 +232,8 @@ function regBtn(){
 		unickname :$('#uNickName').val(),
 		usex :$('#uSex').val(),
 	}
+	
+
 
 
 	$.ajax({
@@ -281,11 +258,12 @@ function regBtn(){
 
 function loginBtn(){
 	
+	console.log($('#uEmail').val());
+	
 	var data = {
 		uemail :$('#uEmail').val(),
 		upw :$('#uPw').val(),
 	}
-	
 
 	$.ajax({
 	 url:'http://localhost:8080/user/login',
@@ -322,35 +300,6 @@ window.onload = function(){
 		document.getElementById('register').textContent= "로그아웃";
 
 	}
-	
-	$.ajax({
-		 url:'http://localhost:8080/board/output',
-	        type: 'GET',
-	        data: "",
-	        contentType: 'application/json; charset=utf-8',
-	        error: function () {            
-	 			
-	        }, success: function (result) {
-	            
-	        	
-	        	for(var i = 0; i<result.length; i++){
-	        		console.log(result[i].imgpath);
-	        		var img = document.getElementsByClassName("gameImage")[i];
-	        		img.src = "http://localhost:8080" +result[i].imgpath; 
-		        	console.log(img.src);
-	        	}
-	        
-	        	
-	        	
-
-	            
-	            //document.getElementById("login").textContent = window.localStorage.getItem('unickname');
-	            //document.getElementById("register").textContent = "로그아웃";  
-
-	        }
-	});	
-	
-	
 }
 
 $('#register').on("click", function(){

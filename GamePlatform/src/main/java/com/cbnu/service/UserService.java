@@ -17,22 +17,17 @@ public class UserService {
 
 	public UserDTO login(UserDTO user) {
 		
-		log.info("success");
-		
 		UserDTO result = mapper.userLogin(user);
 		
-		log.info(result);
 		
 		return result;
 	}
 	
 	public void register(UserDTO user) {
 		
-		log.info("success");
 		
 		mapper.userRegister(user);
 	}
-	
 
 	
 }

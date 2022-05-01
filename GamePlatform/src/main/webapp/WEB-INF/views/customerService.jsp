@@ -110,12 +110,6 @@
 			</article>
 		</section>
 		
-		<section id="loginForm">
-			<h3>게임 순위</h3>
-				
-
-			
-		</section>
 	</div>
 	
 	<footer>

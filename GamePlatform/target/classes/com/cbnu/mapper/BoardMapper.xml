@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cbnu.mapper.BoardMapper">
+
+	<insert id="boardSubmit">
+		insert into board (title, content, imgpath, uid, unickname)
+		values (#{title}, #{content}, #{imgpath}, #{uid}, #{unickname})
+	</insert>
+	
+	<select id="output" resultType="com.cbnu.dto.BoardDTO">
+		select * from board
+	</select>
+</mapper>

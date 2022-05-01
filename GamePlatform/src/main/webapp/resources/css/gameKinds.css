@@ -115,19 +115,16 @@ aside table td{
 #mainDoc section article{
 	background-color: #263859;
 	padding-left: 25px;
-	height: 250px;
-	margin-left: 20px;
+	height: 580px;
 	width: 1150px;
 	margin-right: 20px;
 }
 
-#mainDoc section article:last-child{
-	margin-top: 5%;
-}
 
 #mainDoc section h3 {
 	color: white;
 	font-size : 1.3em;
+	padding-top : 10px;
 	margin-top: 0;
 }
 
@@ -136,20 +133,28 @@ aside table td{
 	width: 250px;
 	height: 180px;
 	background-color: white;
-	margin-left: 10%
+	margin-left: 10%;
 }
 
-.emptyText:first-child{
-	padding-top : 5%;
+.gameFrame2{
+	margin-top: 5%;
+	margin-bottom:3%;
 }
 
-.emptyText{
-	color: white;
-	font-size : 1.3em;
-	margin-left: 30%;
-	
-	margin-top: 0;
+.arrowBtn{
+	text-align : center;
+	margin-top : 10px;
+	margin-left : 5%;
 }
+
+.arrowBtn span{
+	border: 1px solid white;
+	background-color: #C4C4C4;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 10px;
+}
+
 #loginForm{
 	background-color: #263859;
 	width: 20%;

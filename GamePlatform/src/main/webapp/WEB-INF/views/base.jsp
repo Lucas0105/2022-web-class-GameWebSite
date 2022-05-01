@@ -121,12 +121,6 @@
 			</article>
 		</section>
 		
-		<section id="loginForm">
-			<h3>게임 순위</h3>
-				
-
-			
-		</section>
 	</div>
 	
 	<footer>
@@ -302,7 +296,8 @@ function loginBtn(){
             var resultData = JSON.parse(result);
 
             window.localStorage.setItem('unickname', resultData.unickname);
-            
+            window.localStorage.setItem('uid', resultData.uid);
+
             document.getElementById("login").textContent = window.localStorage.getItem('unickname');
             document.getElementById("register").textContent = "로그아웃";
 
